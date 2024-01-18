@@ -22,3 +22,26 @@ export function FormatString(sentence: string): string {
 
     return j == 0 ? 'ERROR' : result.join('');
 }
+
+export function FormatStringV2(sentence: string): string {
+    let result: string[] | string = [];
+
+    let i = 0;
+
+    while(i < sentence.length) {
+        if(
+            (sentence[i] >= 'A' && sentence[i] <= 'Z') ||
+            (sentence[i] >= 'a' && sentence[i] <= 'z') ||
+            (sentence[i] >= '0' && sentence[i] <= '9') ||
+            sentence[i] == ' ' ||
+            sentence[i] == '-' ||
+            sentence[i] == '_'
+        ) {
+            result = [...result, sentence[i]];
+        }
+        
+        i += 1;
+    }
+
+    return result.length == 0 ? 'ERROR' : result.join('');
+}
