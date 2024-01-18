@@ -1,6 +1,9 @@
 {
   "name": "challenge-01",
   "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "jest": "^29.7.0",
